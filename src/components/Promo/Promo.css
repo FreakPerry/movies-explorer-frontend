@@ -1,0 +1,41 @@
+.promo {
+  width: 100%;
+  background-color: #f3c1f8;
+  padding: 185px 0 224px;
+}
+
+.promo__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo__title {
+  margin: 0;
+  width: 730px;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.promo__logo {
+  position: absolute;
+}
+
+@media (max-width: 320px) {
+  .promo {
+    padding: 207px 0 246px;
+  }
+
+  .promo__title {
+    font-size: 31px;
+    line-height: 39px;
+  }
+
+  .promo__logo {
+    width: 248px;
+  }
+}
