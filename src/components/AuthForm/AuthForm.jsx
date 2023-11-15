@@ -15,18 +15,24 @@ function AuthForm() {
           {isRegister && (
             <div className="auth__input-container">
               <label className="auth__input-ttl">Имя</label>
-              <input type="text" className="auth__input " />
+              <input
+                type="text"
+                className="auth__input "
+                minLength="2"
+                maxLength="40"
+                name="name"
+              />
               <span className="auth__input-error"></span>
             </div>
           )}
           <div className="auth__input-container">
             <label className="auth__input-ttl">E-mail</label>
-            <input type="text" className="auth__input " />
+            <input type="email" name="email" className="auth__input " />
             <span className="auth__input-error">Что-то пошло не так...</span>
           </div>
           <div className="auth__input-container">
             <label className="auth__input-ttl">Пароль</label>
-            <input type="password" className="auth__input" />
+            <input type="password" name="password" className="auth__input" />
             <span className="auth__input-error auth__input-error_active"></span>
           </div>
         </form>

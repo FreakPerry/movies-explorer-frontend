@@ -8,12 +8,19 @@ function EditForm() {
       <form className="profile__form">
         <div className="profile__inpt-container">
           <label className="profile__inpt-ttl">Имя</label>
-          <input type="text" className="profile__inpt" value={'Виталий'} readOnly />
+          <input
+            type="text"
+            minLength="2"
+            maxLength="40"
+            className="profile__inpt"
+            value={'Виталий'}
+            readOnly
+          />
         </div>
 
         <div className="profile__inpt-container">
           <label className="profile__inpt-ttl">E-mail</label>
-          <input type="text" className="profile__inpt" value={'pochta@yandex.ru'} readOnly />
+          <input type="email" className="profile__inpt" value={'pochta@yandex.ru'} readOnly />
         </div>
         <div className="profile__btn-container">
           <ApiError />
