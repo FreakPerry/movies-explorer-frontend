@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import './AuthForm.css';
 import ApiError from '../ApiError/ApiError';
 
@@ -9,7 +9,7 @@ function AuthForm() {
   return (
     <section className="auth">
       <div className="auth__container">
-        <div className="auth__logo"></div>
+        <NavLink to="/" className="auth__logo"></NavLink>
         <h1 className="auth__title">{isRegister ? 'Добро пожаловать!' : 'Рады видеть!'}</h1>
         <form className="auth__form">
           {isRegister && (
@@ -17,29 +17,47 @@ function AuthForm() {
               <label className="auth__input-ttl">Имя</label>
               <input
                 type="text"
+                placeholder="Введите имя"
                 className="auth__input "
                 minLength="2"
                 maxLength="40"
                 name="name"
+                required
               />
               <span className="auth__input-error"></span>
             </div>
           )}
           <div className="auth__input-container">
             <label className="auth__input-ttl">E-mail</label>
-            <input type="email" name="email" className="auth__input " />
+            <input
+              type="email"
+              name="email"
+              placeholder="Введите почту"
+              className="auth__input"
+              required
+            />
             <span className="auth__input-error">Что-то пошло не так...</span>
           </div>
           <div className="auth__input-container">
             <label className="auth__input-ttl">Пароль</label>
-            <input type="password" name="password" className="auth__input" />
+            <input
+              type="password"
+              placeholder="Введите пароль"
+              name="password"
+              minLength="8"
+              maxLength="50"
+              className="auth__input"
+              required
+            />
             <span className="auth__input-error auth__input-error_active"></span>
           </div>
         </form>
       </div>
       <div className="auth__bottom-container">
         <ApiError />
-        <button className="auth__btn">{isRegister ? 'Зарегистрироваться' : 'Войти'}</button>
+        <button type="submit" className="auth__btn">
+          {isRegister ? 'Зарегистрироваться' : 'Войти'}
+        </button>
         <div className="auth__nav-cnt">
           <p className="auth__text">
             {isRegister ? 'Уже зарегистрированы?' : 'Еще не зарегистрированы?'}

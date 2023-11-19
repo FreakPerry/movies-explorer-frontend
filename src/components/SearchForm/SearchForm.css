@@ -1,11 +1,11 @@
 .src {
-  width: 1140px;
+  width: 100%;
   box-sizing: border-box;
-  padding: 70px 0 80px;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 70px 70px 70px;
 }
 
 .src__container {
+  max-width: 100%;
   min-height: 72px;
   box-sizing: border-box;
   padding: 16px 30px 16px 43px;
@@ -40,6 +40,12 @@
   text-align: left;
   padding: 0;
   flex-grow: 1;
+  border-radius: 3px;
+}
+
+.src__inpt:focus {
+  outline: 1px solid #f3c1f8;
+  box-shadow: 0 0 2px 2px #f3c1f8;
 }
 
 .src__btn {
@@ -76,6 +82,11 @@
   display: inline-block;
   width: 34px;
   height: 14px;
+  opacity: 1;
+}
+
+.src__check:hover {
+  opacity: 0.8;
 }
 
 .src__check input {
@@ -127,17 +138,21 @@ input:checked + .src__check-slider:before {
 
 @media (max-width: 768px) {
   .src {
-    width: 708px;
-    padding: 80px 0 120px;
-    margin: 0 30px 0;
+    padding: 80px 30px 109px;
+  }
+
+  .src__container {
+    padding-right: 20px;
+  }
+
+  .src__check-container {
+    margin-left: 22px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 632px) {
   .src {
-    width: 300px;
-    margin: 0 10px;
-    padding-bottom: 44px;
+    padding: 80px 10px 46px;
   }
 
   .src__container {
@@ -154,7 +169,7 @@ input:checked + .src__check-slider:before {
   }
 
   .src__inpt-container {
-    width: 300px;
+    width: 100%;
     min-height: 72px;
     box-sizing: border-box;
     padding: 19px;

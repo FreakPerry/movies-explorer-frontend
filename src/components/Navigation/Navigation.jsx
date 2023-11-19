@@ -26,9 +26,7 @@ function Navigation({ open }) {
         </ul>
         <NavLink to="/profile" className="navigation__link">
           <span>Аккаунт</span>
-          <div
-            className={`${isLanding ? 'navigation__acc-icn' : 'navigation__acc-icn_dark'}`}
-          ></div>
+          <div className={`navigation__acc-icn ${!isLanding && 'navigation__acc-icn_dark'}`}></div>
         </NavLink>
       </nav>
     </div>

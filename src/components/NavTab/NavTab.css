@@ -1,14 +1,21 @@
 .nav {
   width: 100%;
   background-color: #000000;
-  padding: 26px 0;
+  padding: 25px 0 23px;
   display: flex;
 }
 
-.nav__container {
+.nav__list {
   display: flex;
-  margin: auto;
   gap: 40px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__link {
@@ -28,8 +35,13 @@
   opacity: 0.7;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .nav {
+    padding-bottom: 24px;
+  }
+
+  .nav__list {
+    gap: 24px;
   }
 
   .nav__link {

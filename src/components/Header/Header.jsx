@@ -25,9 +25,9 @@ function Header() {
               </a>
             </li>
             <li>
-              <button to="/signin" className="header__login-bttn">
+              <NavLink to="/signin" className="header__login-bttn">
                 Войти
-              </button>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -35,6 +35,7 @@ function Header() {
         <>
           <Navigation open={isOpen} />
           <button
+            type="button"
             onClick={toggleSidebarClick}
             className={`header__burger-btn ${isOpen ? 'header__burger-btn_open' : ''}`}
           >

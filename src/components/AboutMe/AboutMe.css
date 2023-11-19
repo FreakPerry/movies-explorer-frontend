@@ -85,7 +85,7 @@
 
 @media (max-width: 768px) {
   .student {
-    padding: 90px 50px;
+    padding: 90px 50px 0;
   }
 
   .student__name {
@@ -96,6 +96,7 @@
   .student__info {
     font-size: 12px;
     line-height: 18px;
+    margin-top: 16px;
   }
 
   .student__text {
@@ -105,17 +106,22 @@
   .student__about {
     font-size: 12px;
     line-height: 18px;
+    margin-top: 20px;
   }
 
   .student__avatar {
     width: 255px;
     height: 307px;
   }
+
+  .student__social {
+    margin-top: 88px;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .student {
-    padding: 70px 14px;
+    padding: 18px 14px;
   }
 
   .student__title {
@@ -137,6 +143,7 @@
   }
 
   .student__info {
+    margin-top: 20px;
     font-size: 11px;
     line-height: 16px;
   }

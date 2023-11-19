@@ -65,13 +65,55 @@
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .techs {
     padding: 90px 50px;
   }
 
+  .techs__items {
+    margin-top: 82px;
+  }
+
   .techs__item {
     width: 84px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .techs__subtitle {
+    margin-top: 79px;
+  }
+
+  .techs__text {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 747px) {
+  .techs__items {
+    width: 554px;
+  }
+}
+@media (max-width: 654px) {
+  .techs__items {
+    width: 460px;
+  }
+}
+@media (max-width: 560px) {
+  .techs__items {
+    width: 366px;
+  }
+}
+@media (max-width: 466px) {
+  .techs__items {
+    width: 272px;
+  }
+}
+@media (max-width: 373px) {
+  .techs__items {
+    width: 178px;
   }
 }
 

@@ -1,11 +1,7 @@
 import AuthForm from '../../components/AuthForm/AuthForm';
 
 function Auth() {
-  return (
-    <>
-      <AuthForm />
-    </>
-  );
+  return <AuthForm />;
 }
 
 export default Auth;

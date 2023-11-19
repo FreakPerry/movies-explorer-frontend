@@ -1,5 +1,4 @@
 import './Portfolio.css';
-import arrowIcon from '../../images/portfolio-arrow.svg';
 
 function Portfolio() {
   return (
@@ -8,21 +7,36 @@ function Portfolio() {
         <h2 className="portfolio__title">Портфолио</h2>
         <ul className="portfolio__list">
           <li className="portfolio__item">
-            <a href="#" target="_blank" className="portfolio__link">
+            <a
+              href="https://freakperry.github.io/how-to-learn/"
+              target="_blank"
+              className="portfolio__link"
+              rel="noreferrer"
+            >
               <span className="portfolio__link-text">Статичный сайт</span>
-              <img src={arrowIcon} alt="" className="portfolio__arrow-icn" />
+              <div className="portfolio__arrow-icn" />
             </a>
           </li>
           <li className="portfolio__item">
-            <a href="#" target="_blank" className="portfolio__link">
+            <a
+              href="https://freakperry.github.io/russian-travel/"
+              target="_blank"
+              className="portfolio__link"
+              rel="noreferrer"
+            >
               <span>Адаптивный сайт</span>
-              <img src={arrowIcon} alt="" className="portfolio__arrow-icn" />
+              <div className="portfolio__arrow-icn" />
             </a>
           </li>
           <li className="portfolio__item">
-            <a href="#" target="_blank" className="portfolio__link">
+            <a
+              href="https://e-tatarenko.nomoredomainsrocks.ru/"
+              target="_blank"
+              className="portfolio__link"
+              rel="noreferrer"
+            >
               <span>Одностраничное приложение</span>
-              <img src={arrowIcon} alt="" className="portfolio__arrow-icn" />
+              <div className="portfolio__arrow-icn" />
             </a>
           </li>
         </ul>

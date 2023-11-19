@@ -14,7 +14,7 @@ function NotFound() {
         <h1 className="nf__ttl">404</h1>
         <p className="nf__txt">Страница не найдена</p>
       </div>
-      <button onClick={goBack} className="nf__btn">
+      <button type="button" onClick={goBack} className="nf__btn">
         Назад
       </button>
     </div>
