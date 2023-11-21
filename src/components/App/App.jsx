@@ -10,17 +10,16 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Preloader from '../Preloader/Preloader';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {
-    document.documentElement.lang = 'ru';
-  }, []);
+  document.documentElement.lang = 'ru';
 
   const location = useLocation();
 
-  const isHeaderVisible = !['/signup', '/signin'].includes(location.pathname);
-  const isFooterVisible = !['/signup', '/signin', '/profile'].includes(location.pathname);
+  const validRoutes = ['/', 'movies', 'saved-movies', 'profile', 'preloader', 'signup', 'signin'];
+
+  const isHeaderVisible = validRoutes.includes(location.pathname);
+  const isFooterVisible = validRoutes.includes(location.pathname);
 
   return (
     <div className="page">
@@ -32,9 +31,9 @@ function App() {
           <Route path="saved-movies" element={<SavedMovies />} />
           <Route path="profile" element={<Profile />} />
           <Route path="preloader" element={<Preloader />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="signup" element={<Auth />} />
           <Route path="signin" element={<Auth />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       {isFooterVisible && <Footer />}
