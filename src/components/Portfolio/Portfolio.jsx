@@ -14,7 +14,7 @@ function Portfolio() {
               rel="noreferrer"
             >
               <span className="portfolio__link-text">Статичный сайт</span>
-              <div className="portfolio__arrow-icn" />
+              <div className="portfolio__link-icn" />
             </a>
           </li>
           <li className="portfolio__item">
@@ -25,7 +25,7 @@ function Portfolio() {
               rel="noreferrer"
             >
               <span>Адаптивный сайт</span>
-              <div className="portfolio__arrow-icn" />
+              <div className="portfolio__link-icn" />
             </a>
           </li>
           <li className="portfolio__item">
@@ -36,7 +36,7 @@ function Portfolio() {
               rel="noreferrer"
             >
               <span>Одностраничное приложение</span>
-              <div className="portfolio__arrow-icn" />
+              <div className="portfolio__link-icn" />
             </a>
           </li>
         </ul>

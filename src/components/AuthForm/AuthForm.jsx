@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './AuthForm.css';
 import ApiError from '../ApiError/ApiError';
 
@@ -9,7 +9,7 @@ function AuthForm() {
   return (
     <section className="auth">
       <div className="auth__container">
-        <NavLink to="/" className="auth__logo"></NavLink>
+        <Link to="/" className="auth__logo"></Link>
         <h1 className="auth__title">{isRegister ? 'Добро пожаловать!' : 'Рады видеть!'}</h1>
         <form className="auth__form">
           {isRegister && (

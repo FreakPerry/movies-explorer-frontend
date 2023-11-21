@@ -9,7 +9,7 @@ function MoviesCard(cardName) {
         <img src={movieCover} alt={cardName} className="card__img" />
         <button type="submit" className="card__btn">
           <span className="card__btn-txt">Сохранить</span>
-          <div className="card__btn-icn" />
+          <span className="card__btn-icn" />
         </button>
       </div>
       <div className="card__description">

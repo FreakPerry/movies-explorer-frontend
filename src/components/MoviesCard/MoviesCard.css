@@ -6,7 +6,8 @@
 }
 
 .card__img-container {
-  aspect-ratio: 9/5;
+  height: 190px;
+  /* aspect-ratio: 9/5; */
   overflow: hidden;
   border-radius: 6px;
   position: relative;

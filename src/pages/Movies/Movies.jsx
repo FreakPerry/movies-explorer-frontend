@@ -6,10 +6,8 @@ import Footer from '../../components/Footer/Footer';
 function Movies() {
   return (
     <>
-      <Header />
       <SearchForm />
       <MoviesCardList />
-      <Footer />
     </>
   );
 }

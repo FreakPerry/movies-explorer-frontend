@@ -43,7 +43,7 @@
 
 @media (max-width: 768px) {
   .cards {
-    margin: 0 30px;
+    margin: 0 30px 12px;
   }
 
   .cards__list {

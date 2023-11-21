@@ -18,6 +18,10 @@
   background: url(../../images/logo.svg) center / contain no-repeat;
 }
 
+.header__logo:hover {
+  opacity: 0.7;
+}
+
 .header__list {
   display: flex;
   align-items: center;
@@ -54,6 +58,7 @@
   letter-spacing: 0px;
   text-align: right;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header__login-bttn:hover {
@@ -89,7 +94,7 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 15px 30px;
+    padding: 18px 30px;
   }
 
   .header__burger-btn {
@@ -97,10 +102,19 @@
     z-index: 2;
   }
 
+  .header__burger-btn_open {
+    position: fixed;
+    top: 15px;
+    right: 16px;
+  }
+
   .header__burger-btn_open .header__burger-line:nth-child(2) {
     opacity: 0;
   }
 
+  .header__burger-btn_open .header__burger-line {
+    width: 23px;
+  }
   .header__burger-btn_open .header__burger-line:nth-child(1) {
     transform: rotate(45deg);
   }
@@ -112,6 +126,25 @@
 
 @media (max-width: 320px) {
   .header {
-    padding: 15px 14px;
+    padding: 18px 14px;
+  }
+
+  .header__list {
+    gap: 14px;
+  }
+
+  .header__item {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+
+  .header__login-bttn {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    padding: 5px 12px;
   }
 }

@@ -24,7 +24,7 @@ function Navigation({ open }) {
             </NavLink>
           </li>
         </ul>
-        <NavLink to="/profile" className="navigation__link">
+        <NavLink to="/profile" className="navigation__link navigation__link_tablet">
           <span>Аккаунт</span>
           <div className={`navigation__acc-icn ${!isLanding && 'navigation__acc-icn_dark'}`}></div>
         </NavLink>

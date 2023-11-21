@@ -1,5 +1,4 @@
 import './AboutMe.css';
-import avatar from '../../images/avatar.jpg';
 
 function AboutMe() {
   return (
@@ -25,7 +24,7 @@ function AboutMe() {
               Github
             </a>
           </div>
-          <img src={avatar} alt="Аватар" className="student__avatar" />
+          <div className="student__avatar" />
         </div>
       </div>
     </section>

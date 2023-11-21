@@ -10,6 +10,9 @@ function MoviesCardList() {
         <MoviesCard />
         <MoviesCard />
         <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
       </ul>
       <button type="submit" className="cards-list__btn">
         Ещё

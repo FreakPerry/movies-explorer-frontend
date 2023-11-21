@@ -10,14 +10,12 @@ import Footer from '../../components/Footer/Footer';
 function Landing() {
   return (
     <>
-      <Header />
       <Promo />
       <NavTab />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Portfolio />
-      <Footer />
     </>
   );
 }
