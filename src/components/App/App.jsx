@@ -10,8 +10,13 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Preloader from '../Preloader/Preloader';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.lang = 'ru';
+  }, []);
+
   const location = useLocation();
 
   const isHeaderVisible = !['/signup', '/signin'].includes(location.pathname);
