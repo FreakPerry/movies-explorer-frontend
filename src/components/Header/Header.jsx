@@ -16,7 +16,7 @@ function Header() {
   return (
     <header className={`header ${isLanding ? 'header_pink' : ''}`}>
       <NavLink to="/" className="header__logo"></NavLink>
-      {isLoggedIn ? (
+      {!isLoggedIn ? (
         <nav className="header__auth">
           <ul className="header__list">
             <li>

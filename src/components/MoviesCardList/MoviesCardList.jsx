@@ -14,7 +14,7 @@ function MoviesCardList() {
         <MoviesCard />
         <MoviesCard />
       </ul>
-      <button type="submit" className="cards-list__btn">
+      <button type="submit" className="cards__list-btn">
         Ещё
       </button>
     </div>
