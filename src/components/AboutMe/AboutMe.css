@@ -121,7 +121,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   .student {
     padding: 18px 14px;
   }

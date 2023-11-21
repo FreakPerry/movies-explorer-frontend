@@ -16,10 +16,11 @@ function App() {
 
   const location = useLocation();
 
-  const validRoutes = ['/', 'movies', 'saved-movies', 'profile', 'preloader', 'signup', 'signin'];
+  const validHeaderRoutes = ['/', '/movies', '/saved-movies', '/profile'];
+  const validFooterRoutes = ['/', '/movies', '/saved-movies'];
 
-  const isHeaderVisible = validRoutes.includes(location.pathname);
-  const isFooterVisible = validRoutes.includes(location.pathname);
+  const isHeaderVisible = validHeaderRoutes.includes(location.pathname);
+  const isFooterVisible = validFooterRoutes.includes(location.pathname);
 
   return (
     <div className="page">
