@@ -1,5 +1,4 @@
 import './MoviesCard.css';
-import saveIcn from '../../images/saveIcn.svg';
 import movieCover from '../../images/B4F64F31-831A-4902-AE9E-67D0E21DC2B8_1_105_c.jpeg';
 
 function MoviesCard(cardName) {
