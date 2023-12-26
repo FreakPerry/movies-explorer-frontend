@@ -1,9 +1,14 @@
 import EditForm from '../../components/EditForm/EditFrom';
 
-function Profile() {
+function Profile({ onLogout, onSubmit, successMessage, isSuccess }) {
   return (
     <>
-      <EditForm />
+      <EditForm
+        onLogout={onLogout}
+        onSubmit={onSubmit}
+        successMessage={successMessage}
+        isSuccess={isSuccess}
+      />
     </>
   );
 }
