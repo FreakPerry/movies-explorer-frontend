@@ -1,0 +1,136 @@
+.navigation {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navigation__menu {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navigation__item {
+  list-style: none;
+}
+
+.navigation__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.09px;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.navigation__link:hover {
+  opacity: 0.7;
+}
+
+.navigation__link_disp {
+  display: none;
+}
+
+.navigation__acc-icn {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/acc-icn-wht.svg') no-repeat center #000;
+  border-radius: 6px;
+}
+
+.navigation__acc-icn_dark {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/acc-icn-blck.svg') no-repeat center #f9f9f9;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 1s;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .navigation__link_tablet {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .navigation__menu {
+    position: fixed;
+    right: -680px;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    padding: 159px 90px 92px;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .navigation__link_disp {
+    display: block;
+  }
+
+  .navigation__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .navigation_open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navigation__menu_open {
+    transform: translateX(-680px);
+  }
+}
+
+@media (max-width: 320px) {
+  .navigation__menu {
+    box-sizing: border-box;
+    padding: 144px 10px 48px;
+    width: 320px;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
