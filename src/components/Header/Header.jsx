@@ -3,10 +3,9 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 import { NavLink, useLocation } from 'react-router-dom';
 
-function Header() {
+function Header({ isLoggedIn }) {
   const location = useLocation().pathname;
   const isLanding = location === '/';
-  const isLoggedIn = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebarClick() {

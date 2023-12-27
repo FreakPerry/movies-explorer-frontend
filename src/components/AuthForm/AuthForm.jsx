@@ -1,11 +1,29 @@
 import { Link, useLocation } from 'react-router-dom';
 import './AuthForm.css';
-import ApiError from '../ApiError/ApiError';
+import useFormAndValidation from '../../hooks/useFormAndValidation';
+import Notification from '../Notification/Notification';
 
-function AuthForm() {
+function AuthForm({ onRegister, onLogin, error, resetError }) {
   const location = useLocation().pathname;
 
+  const { values, handleChange, messages, isValid, resetForm } = useFormAndValidation();
+
   const isRegister = location === '/signup';
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (isRegister) {
+      onRegister(values);
+    } else {
+      onLogin(values);
+    }
+  }
+
+  function handleLinkClick() {
+    resetForm();
+    resetError();
+  }
+
   return (
     <section className="auth">
       <div className="auth__container">
@@ -23,8 +41,10 @@ function AuthForm() {
                 maxLength="40"
                 name="name"
                 required
+                onChange={handleChange}
+                value={values.name || ''}
               />
-              <span className="auth__input-error"></span>
+              <span className="auth__input-error">{messages.name}</span>
             </div>
           )}
           <div className="auth__input-container">
@@ -35,8 +55,10 @@ function AuthForm() {
               placeholder="Введите почту"
               className="auth__input"
               required
+              onChange={handleChange}
+              value={values.email || ''}
             />
-            <span className="auth__input-error">Что-то пошло не так...</span>
+            <span className="auth__input-error">{messages.email}</span>
           </div>
           <div className="auth__input-container">
             <label className="auth__input-ttl">Пароль</label>
@@ -48,14 +70,16 @@ function AuthForm() {
               maxLength="50"
               className="auth__input"
               required
+              onChange={handleChange}
+              value={values.password || ''}
             />
-            <span className="auth__input-error auth__input-error_active"></span>
+            <span className="auth__input-error">{messages.password}</span>
           </div>
         </form>
       </div>
       <div className="auth__bottom-container">
-        <ApiError />
-        <button type="submit" className="auth__btn">
+        <Notification message={error} isSuccess={false} />
+        <button type="submit" className="auth__btn" onClick={handleSubmit} disabled={!isValid}>
           {isRegister ? 'Зарегистрироваться' : 'Войти'}
         </button>
         <div className="auth__nav-cnt">
@@ -63,11 +87,11 @@ function AuthForm() {
             {isRegister ? 'Уже зарегистрированы?' : 'Еще не зарегистрированы?'}
           </p>
           {isRegister ? (
-            <Link to="/signin" className="auth__link">
+            <Link to="/signin" className="auth__link" onClick={handleLinkClick}>
               Войти
             </Link>
           ) : (
-            <Link to="/signup" className="auth__link">
+            <Link to="/signup" className="auth__link" onClick={handleLinkClick}>
               Регистрация
             </Link>
           )}
