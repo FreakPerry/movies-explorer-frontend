@@ -1,10 +1,14 @@
 import EditForm from '../../components/EditForm/EditFrom';
-import Header from '../../components/Header/Header';
 
-function Profile() {
+function Profile({ onLogout, onSubmit, successMessage, isSuccess }) {
   return (
     <>
-      <EditForm />
+      <EditForm
+        onLogout={onLogout}
+        onSubmit={onSubmit}
+        successMessage={successMessage}
+        isSuccess={isSuccess}
+      />
     </>
   );
 }

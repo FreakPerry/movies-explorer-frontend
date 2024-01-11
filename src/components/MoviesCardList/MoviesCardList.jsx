@@ -1,22 +1,21 @@
+import { isMovieSaved } from '../../utils/utils';
 import MoviesCard from '../MoviesCard/MoviesCard';
+import Preloader from '../Preloader/Preloader';
 import './MoviesCardList.css';
 
-function MoviesCardList() {
+function MoviesCardList({ movies, isLoading, onSave, onDelete, savedMovies }) {
+
   return (
     <div className="cards">
       <ul className="cards__list">
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
+        {isLoading ? (
+          <Preloader />
+        ) : (
+          movies.map(movie => (
+            <MoviesCard key={movie.id || movie._id} movie={movie} saved={isMovieSaved(savedMovies, movie)} onSave={onSave} onDelete={onDelete} />
+          ))
+        )}
       </ul>
-      <button type="submit" className="cards__list-btn">
-        Ещё
-      </button>
     </div>
   );
 }
