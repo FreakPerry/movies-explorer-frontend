@@ -132,6 +132,6 @@ class MainApi {
 }
 
 export const mainApi = new MainApi({
-  url: 'http://localhost:3002',
+  url: 'https://api.e-tatarenko.diploma.nomoredomainsrocks.ru',
   headers: { 'Content-Type': 'application/json' }
 });
